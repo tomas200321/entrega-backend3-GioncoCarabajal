@@ -1,0 +1,40 @@
+
+openapi: 3.0.1
+info:
+  title: Backend Final API
+  version: 1.0.0
+paths:
+  /api/users:
+    get:
+      summary: Obtener todos los usuarios
+      responses:
+        '200':
+          description: Lista de usuarios
+    post:
+      summary: Crear un usuario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Usuario creado
+  /api/adoptions:
+    get:
+      summary: Obtener todas las adopciones
+      responses:
+        '200':
+          description: Lista de adopciones
+    post:
+      summary: Crear una adopción
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Adopción creada
